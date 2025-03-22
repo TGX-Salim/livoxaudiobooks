@@ -11,7 +11,7 @@
 
         <p class="pt-1.5 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonHome }}</p>
 
-        <div v-show="homePage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="homePage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="isPodcastLibrary" :to="`/library/${currentLibraryId}/podcast/latest`" class="w-full h-20 flex flex-col items-center justify-center text-white border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isPodcastLatestPage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -19,7 +19,7 @@
 
         <p class="pt-1 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonLatest }}</p>
 
-        <div v-show="isPodcastLatestPage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="isPodcastLatestPage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link :to="`/library/${currentLibraryId}/bookshelf`" class="w-full h-20 flex flex-col items-center justify-center text-white border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="showLibrary ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -29,7 +29,7 @@
 
         <p class="pt-1.5 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonLibrary }}</p>
 
-        <div v-show="showLibrary" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="showLibrary" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/series`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isSeriesPage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -39,7 +39,7 @@
 
         <p class="pt-1.5 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonSeries }}</p>
 
-        <div v-show="isSeriesPage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="isSeriesPage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/collections`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="paramId === 'collections' ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -47,7 +47,7 @@
 
         <p class="pt-1.5 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonCollections }}</p>
 
-        <div v-show="paramId === 'collections'" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="paramId === 'collections'" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="showPlaylists" :to="`/library/${currentLibraryId}/bookshelf/playlists`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isPlaylistsPage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -55,7 +55,7 @@
 
         <p class="pt-0.5 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonPlaylists }}</p>
 
-        <div v-show="isPlaylistsPage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="isPlaylistsPage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/authors`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isAuthorsPage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -68,7 +68,7 @@
 
         <p class="pt-1 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonAuthors }}</p>
 
-        <div v-show="isAuthorsPage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="isAuthorsPage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/narrators`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isNarratorsPage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -76,7 +76,7 @@
 
         <p class="pt-1 text-center leading-4" style="font-size: 0.9rem">{{ $strings.LabelNarrators }}</p>
 
-        <div v-show="isNarratorsPage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="isNarratorsPage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="isBookLibrary && userIsAdminOrUp" :to="`/library/${currentLibraryId}/stats`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isStatsPage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -84,7 +84,7 @@
 
         <p class="pt-1 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonStats }}</p>
 
-        <div v-show="isStatsPage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="isStatsPage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="isPodcastLibrary && userIsAdminOrUp" :to="`/library/${currentLibraryId}/podcast/search`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isPodcastSearchPage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -92,7 +92,7 @@
 
         <p class="pt-1.5 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonAdd }}</p>
 
-        <div v-show="isPodcastSearchPage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="isPodcastSearchPage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="isPodcastLibrary && userIsAdminOrUp" :to="`/library/${currentLibraryId}/podcast/download-queue`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isPodcastDownloadQueuePage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
@@ -100,7 +100,7 @@
 
         <p class="pt-1.5 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonDownloadQueue }}</p>
 
-        <div v-show="isPodcastDownloadQueuePage" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="isPodcastDownloadQueuePage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
       <nuxt-link v-if="numIssues" :to="`/library/${currentLibraryId}/bookshelf?filter=issues`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-opacity-40 cursor-pointer relative" :class="showingIssues ? 'bg-error bg-opacity-40' : 'bg-error bg-opacity-20'">
@@ -108,18 +108,18 @@
 
         <p class="pt-1.5 text-center leading-4" style="font-size: 1rem">{{ $strings.ButtonIssues }}</p>
 
-        <div v-show="showingIssues" class="h-full w-0.5 bg-yellow-400 absolute top-0 left-0" />
+        <div v-show="showingIssues" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
         <div class="absolute top-1 right-1 w-4 h-4 rounded-full bg-white bg-opacity-30 flex items-center justify-center">
           <p class="text-xs font-mono pb-0.5">{{ numIssues }}</p>
         </div>
       </nuxt-link>
     </div>
 
-    <div class="w-full h-12 px-1 py-2 border-t border-black/20 bg-bg absolute left-0" :style="{ bottom: streamLibraryItem ? '224px' : '65px' }">
+    <!-- <div class="w-full h-12 px-1 py-2 border-t border-black/20 bg-bg absolute left-0" :style="{ bottom: streamLibraryItem ? '224px' : '65px' }">
       <p class="underline font-mono text-xs text-center text-gray-300 leading-3 mb-1" @click="clickChangelog">v{{ $config.version }}</p>
       <a v-if="hasUpdate" :href="githubTagUrl" target="_blank" class="text-warning text-xxs text-center block leading-3">Update</a>
       <p v-else class="text-xxs text-gray-400 leading-3 text-center italic">{{ Source }}</p>
-    </div>
+    </div> -->
 
     <modals-changelog-view-modal v-model="showChangelogModal" :versionData="versionData" />
   </div>

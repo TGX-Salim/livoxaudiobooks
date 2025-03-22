@@ -72,7 +72,7 @@ export default {
       return this.$store.getters['getIsMediaStreaming'](this.libraryItemId, this.episodeId)
     },
     wrapperClass() {
-      if (this.isOpenInPlayer) return 'bg-yellow-400 bg-opacity-10'
+      if (this.isOpenInPlayer) return 'bg-[#EF8036] bg-opacity-10'
       if (this.index % 2 === 0) return 'bg-gray-300 bg-opacity-5 hover:bg-opacity-10'
       return 'bg-bg hover:bg-gray-300 hover:bg-opacity-10'
     }

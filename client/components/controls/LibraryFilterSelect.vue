@@ -19,7 +19,7 @@
     <div v-show="showMenu" class="absolute z-10 mt-1 w-full bg-bg border border-black-200 shadow-lg rounded-md py-1 ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none text-sm libraryFilterMenu">
       <ul v-show="!sublist" class="h-full w-full" role="menu">
         <template v-for="item in selectItems">
-          <li :key="item.value" class="select-none relative py-2 pr-9 cursor-pointer hover:bg-white/5" :class="item.value === selected ? 'bg-white/5 text-yellow-400' : 'text-gray-200 hover:text-white'" role="menuitem" :aria-haspopup="item.sublist ? '' : 'menu'" @click="clickedOption(item)">
+          <li :key="item.value" class="select-none relative py-2 pr-9 cursor-pointer hover:bg-white/5" :class="item.value === selected ? 'bg-white/5 text-[#EF8036]' : 'text-gray-200 hover:text-white'" role="menuitem" :aria-haspopup="item.sublist ? '' : 'menu'" @click="clickedOption(item)">
             <div class="flex items-center justify-between">
               <span class="font-normal ml-3 block truncate text-sm">{{ item.text }}</span>
             </div>
@@ -28,7 +28,7 @@
             </div>
             <!-- selected checkmark icon -->
             <div v-if="item.value === selected" class="absolute inset-y-0 right-2 h-full flex items-center pointer-events-none">
-              <span class="material-symbols text-base text-yellow-400">check</span>
+              <span class="material-symbols text-base text-[#EF8036]">check</span>
             </div>
           </li>
         </template>
@@ -48,13 +48,13 @@
           </div>
         </li>
         <template v-for="item in sublistItems">
-          <li :key="item.value" class="select-none relative px-2 cursor-pointer hover:bg-white/5" :class="`${sublist}.${item.value}` === selected ? 'bg-white/5 text-yellow-400' : 'text-gray-200 hover:text-white'" role="menuitem" @click="clickedSublistOption(item.value)">
+          <li :key="item.value" class="select-none relative px-2 cursor-pointer hover:bg-white/5" :class="`${sublist}.${item.value}` === selected ? 'bg-white/5 text-[#EF8036]' : 'text-gray-200 hover:text-white'" role="menuitem" @click="clickedSublistOption(item.value)">
             <div class="flex items-center">
               <span class="font-normal truncate py-2 text-xs">{{ item.text }}</span>
             </div>
             <!-- selected checkmark icon -->
             <div v-if="`${sublist}.${item.value}` === selected" class="absolute inset-y-0 right-2 h-full flex items-center pointer-events-none">
-              <span class="material-symbols text-base text-yellow-400">check</span>
+              <span class="material-symbols text-base text-[#EF8036]">check</span>
             </div>
           </li>
         </template>

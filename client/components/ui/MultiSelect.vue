@@ -21,7 +21,7 @@
             <div class="flex items-center">
               <span class="font-normal ml-3 block truncate">{{ item }}</span>
             </div>
-            <span v-if="selected.includes(item)" class="text-yellow-400 absolute inset-y-0 right-0 flex items-center pr-4">
+            <span v-if="selected.includes(item)" class="text-[#EF8036] absolute inset-y-0 right-0 flex items-center pr-4">
               <span class="material-symbols text-xl">check</span>
             </span>
           </li>

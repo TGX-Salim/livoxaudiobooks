@@ -19,14 +19,14 @@
     <div v-show="showMenu" class="absolute z-10 mt-1 w-full bg-bg border border-black-200 shadow-lg max-h-96 rounded-md py-1 text-sm ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none">
       <ul class="h-full w-full" role="menu">
         <template v-for="item in items">
-          <li :key="item.value" class="select-none relative py-2 pr-9 cursor-pointer hover:bg-white/5" :class="item.value === selected ? 'bg-white/5 text-yellow-400' : 'text-gray-200 hover:text-white'" role="menuitem" @click="clickedOption(item)">
+          <li :key="item.value" class="select-none relative py-2 pr-9 cursor-pointer hover:bg-white/5" :class="item.value === selected ? 'bg-white/5 text-[#EF8036]' : 'text-gray-200 hover:text-white'" role="menuitem" @click="clickedOption(item)">
             <div class="flex items-center justify-between">
               <span class="font-normal ml-3 block truncate">{{ item.text }}</span>
             </div>
 
             <!-- selected checkmark icon -->
             <div v-if="item.value === selected" class="absolute inset-y-0 right-2 h-full flex items-center pointer-events-none">
-              <span class="material-symbols text-base text-yellow-400">check</span>
+              <span class="material-symbols text-base text-[#EF8036]">check</span>
             </div>
           </li>
         </template>

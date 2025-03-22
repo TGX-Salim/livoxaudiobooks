@@ -1,6 +1,9 @@
+> Note: This is a "private" fork of Audiobookshelf. Please contribute to and support the original project - their work is awesome!
+
+<hr/>
+
 <br />
 <div align="center">
-   <img alt="Audiobookshelf Banner" src="https://github.com/advplyr/audiobookshelf/raw/master/images/banner.svg" width="600">
 
   <p align="center">
     <br />
@@ -447,6 +450,6 @@ If you are using VSCode, this project includes a couple of pre-defined targets t
 - `Debug client (nuxt)`—Run the client with live reload.
 - `Debug server and client (nuxt)`—Runs both the preceding two debug targets.
 
-# How to Support
+# How to Support (Original Project)
 
 [See the incomplete "How to Support" page](https://www.audiobookshelf.org/support)

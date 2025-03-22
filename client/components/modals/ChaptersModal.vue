@@ -2,7 +2,7 @@
   <modals-modal v-model="show" name="chapters" :width="600" :height="'unset'">
     <div id="chapter-modal-wrapper" ref="container" class="w-full rounded-lg bg-bg box-shadow-md overflow-y-auto overflow-x-hidden" style="max-height: 80vh">
       <template v-for="chap in chapters">
-        <div :key="chap.id" :id="`chapter-row-${chap.id}`" class="flex items-center px-6 py-3 justify-start cursor-pointer relative" :class="chap.id === currentChapterId ? 'bg-yellow-400/20 hover:bg-yellow-400/10' : chap.end / _playbackRate <= currentChapterStart ? 'bg-success/10 hover:bg-success/5' : 'hover:bg-primary/10'" @click="clickChapter(chap)">
+        <div :key="chap.id" :id="`chapter-row-${chap.id}`" class="flex items-center px-6 py-3 justify-start cursor-pointer relative" :class="chap.id === currentChapterId ? 'bg-[#EF8036]/20 hover:bg-[#EF8036]/10' : chap.end / _playbackRate <= currentChapterStart ? 'bg-success/10 hover:bg-success/5' : 'hover:bg-primary/10'" @click="clickChapter(chap)">
           <p class="chapter-title truncate text-sm md:text-base">
             {{ chap.title }}
           </p>
@@ -10,7 +10,7 @@
           <span class="flex-grow" />
           <span class="font-mono text-xs sm:text-sm text-gray-300">{{ $secondsToTimestamp(chap.start / _playbackRate) }}</span>
 
-          <div v-show="chap.id === currentChapterId" class="w-0.5 h-full absolute top-0 left-0 bg-yellow-400" />
+          <div v-show="chap.id === currentChapterId" class="w-0.5 h-full absolute top-0 left-0 bg-[#EF8036]" />
         </div>
       </template>
     </div>
