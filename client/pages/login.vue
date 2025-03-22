@@ -36,7 +36,7 @@
 
           <div class="w-full h-px bg-white bg-opacity-10 my-4" />
 
-          <p v-if="loginCustomMessage" class="py-2 default-style mb-2" v-html="loginCustomMessage"></p>
+          <p v-if="loginCustomMessage" class="default-style mb-2" v-html="loginCustomMessage"></p>
 
           <p v-if="error" class="text-error text-center py-2">{{ error }}</p>
 
