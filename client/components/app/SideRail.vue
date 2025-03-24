@@ -42,13 +42,13 @@
         <div v-show="isSeriesPage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
 
-      <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/collections`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="paramId === 'collections' ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
+      <!-- <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/collections`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="paramId === 'collections' ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
         <span class="material-symbols text-2xl">&#xe431;</span>
 
         <p class="pt-1.5 text-center leading-4" style="font-size: 0.9rem">{{ $strings.ButtonCollections }}</p>
 
         <div v-show="paramId === 'collections'" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
-      </nuxt-link>
+      </nuxt-link> -->
 
       <nuxt-link v-if="showPlaylists" :to="`/library/${currentLibraryId}/bookshelf/playlists`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative" :class="isPlaylistsPage ? 'bg-primary bg-opacity-80' : 'bg-bg bg-opacity-60'">
         <span class="material-symbols text-2.5xl">&#xe03d;</span>
@@ -102,6 +102,13 @@
 
         <div v-show="isPodcastDownloadQueuePage" class="h-full w-0.5 bg-[#EF8036] absolute top-0 left-0" />
       </nuxt-link>
+
+      <a href="https://livox.co?ref=audiobooks-lib" target="_blank" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-primary cursor-pointer relative bg-bg bg-opacity-60">
+        <span class="material-symbols text-2xl">language</span>
+
+        <p class="pt-1.5 text-center leading-4" style="font-size: 0.9rem">Livox</p>
+
+      </a>
 
       <nuxt-link v-if="numIssues" :to="`/library/${currentLibraryId}/bookshelf?filter=issues`" class="w-full h-20 flex flex-col items-center justify-center text-white text-opacity-80 border-b border-primary border-opacity-70 hover:bg-opacity-40 cursor-pointer relative" :class="showingIssues ? 'bg-error bg-opacity-40' : 'bg-error bg-opacity-20'">
         <span class="material-symbols text-2xl">warning</span>
