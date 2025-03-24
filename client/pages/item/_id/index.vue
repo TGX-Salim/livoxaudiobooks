@@ -140,13 +140,13 @@
 
           <tables-chapters-table v-if="chapters.length" :library-item="libraryItem" class="mt-6" />
 
-          <tables-tracks-table v-if="tracks.length" :title="$strings.LabelStatsAudioTracks" :tracks="tracksWithAudioFile" :is-file="isFile" :library-item-id="libraryItemId" class="mt-6" />
+          <!-- <tables-tracks-table v-if="tracks.length" :title="$strings.LabelStatsAudioTracks" :tracks="tracksWithAudioFile" :is-file="isFile" :library-item-id="libraryItemId" class="mt-6" /> -->
 
           <tables-podcast-lazy-episodes-table ref="episodesTable" v-if="isPodcast" :library-item="libraryItem" />
 
           <tables-ebook-files-table v-if="ebookFiles.length" :library-item="libraryItem" class="mt-6" />
 
-          <tables-library-files-table v-if="libraryFiles.length" :library-item="libraryItem" class="mt-6" />
+          <!-- <tables-library-files-table v-if="libraryFiles.length" :library-item="libraryItem" class="mt-6" /> -->
         </div>
       </div>
     </div>
