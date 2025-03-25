@@ -30,7 +30,7 @@
           </div>
         </form>
       </div>
-      <div v-else-if="isInit" class="w-full max-w-md px-8 pb-8 pt-4 lg:-mt-40">
+      <div v-else-if="isInit" class="w-full max-w-md px-8 pb-8 pt-4">
         <div class="bg-bg rounded-md shadow-lg border border-white border-opacity-5 p-4">
           <p class="text-2xl font-semibold text-center text-white mb-4">{{ $strings.HeaderLogin }}</p>
 
