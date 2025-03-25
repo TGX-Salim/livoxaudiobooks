@@ -87,7 +87,10 @@ class PlaybackSessionManager {
    * @param {import('express').Response} res
    */
   async syncSessionRequest(user, session, payload, res) {
-    if (await this.syncSession(user, session, payload)) {
+    // Disable Progress Sync for guest user livox
+    if (user?.dataValues.username == "livox") {
+      res.sendStatus(204)
+    } else if (await this.syncSession(user, session, payload)) {
       res.sendStatus(200)
     } else {
       res.sendStatus(500)

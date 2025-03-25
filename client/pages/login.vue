@@ -46,9 +46,26 @@
 
             <label class="text-xs text-gray-300 uppercase">{{ $strings.LabelPassword }}</label>
             <ui-text-input v-model.trim="password" type="password" :disabled="processing" class="w-full mb-3" inputName="password" />
-            <div class="w-full flex justify-end py-3">
-              <ui-btn type="submit" :disabled="processing" color="primary" class="leading-none">{{ processing ? 'Checking...' : $strings.ButtonSubmit }}</ui-btn>
+            <div class="py-3 flex justify-end w-full">
+              
+              <ui-btn 
+                type="submit" 
+                :disabled="processing" 
+                color="primary" 
+                class="leading-none w-full"
+              >
+                {{ processing ? 'Checking...' : $strings.ButtonSubmit }}
+              </ui-btn>
             </div>
+
+            <ui-btn 
+                @click="() => { username = 'livox'; password = ''; submitForm(); }" 
+                :disabled="processing" 
+                color="[#EF8036]" 
+                class="leading-none w-full"
+              >
+                Continuer en tant qu'invité
+              </ui-btn>
           </form>
 
           <div v-if="login_local && login_openid" class="w-full h-px bg-white bg-opacity-10 my-4" />
@@ -72,8 +89,8 @@ export default {
       error: null,
       criticalError: null,
       processing: false,
-      username: 'livox',
-      password: 'livox',
+      username: '',
+      password: '',
       showInitScreen: false,
       isInit: false,
       newRoot: {

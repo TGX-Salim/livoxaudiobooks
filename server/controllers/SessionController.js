@@ -13,7 +13,7 @@ const ShareManager = require('../managers/ShareManager')
  */
 
 class SessionController {
-  constructor() {}
+  constructor() { }
 
   /**
    * GET: /api/sessions

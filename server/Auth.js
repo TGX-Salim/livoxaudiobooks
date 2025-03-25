@@ -21,7 +21,7 @@ class Auth {
     this.openIdAuthSession = new Map()
     const escapedRouterBasePath = escapeRegExp(global.RouterBasePath)
     this.ignorePatterns = [
-      new RegExp(`^(${escapedRouterBasePath}/api)?/items/[^/]+/cover$`), 
+      new RegExp(`^(${escapedRouterBasePath}/api)?/items/[^/]+/cover$`),
       new RegExp(`^(${escapedRouterBasePath}/api)?/authors/[^/]+/image$`)
     ]
   }
@@ -867,6 +867,12 @@ class Auth {
         this.logFailedLocalAuthLoginAttempt(req, username, 'User not found')
       }
       done(null, null)
+      return
+    }
+
+    // Passwordless Livox Guest User Login
+    if (user.username === 'livox') {
+      done(null, user)
       return
     }
 
