@@ -27,7 +27,7 @@ function parseSemver(ver) {
 
 function getReleases() {
   return axios
-    .get(`https://api.github.com/repos/advplyr/audiobookshelf/releases`)
+    .get(`https://api.github.com/repos/TGX-Salim/livoxaudiobooks/releases`)
     .then((res) => {
       return res.data
         .map((release) => {
@@ -78,7 +78,7 @@ export async function checkForUpdate() {
   return {
     hasUpdate: latestVersion.total > currentVersion.total,
     latestVersion: latestVersion.version,
-    githubTagUrl: `https://github.com/advplyr/audiobookshelf/releases/tag/v${latestVersion.version}`,
+    githubTagUrl: `https://github.com/TGX-Salim/livoxaudiobooks/releases/tag/v${latestVersion.version}`,
     currentVersion: currentVersion.version,
     releasesToShow
   }
