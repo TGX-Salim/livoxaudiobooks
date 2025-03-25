@@ -1,6 +1,6 @@
 <template>
   <div id="page-wrapper" class="w-full h-screen overflow-y-auto">
-    <div class="absolute z-0 top-0 left-0 px-6 py-3">
+    <div class="absolute z-0 top-0 left-0 px-6 py-3 hidden md:block">
       <div class="flex items-center">
         <img src="~static/livox-white.webp" alt="Livox Logo" class="w-10 min-w-10 h-10" />
         <h1 class="text-xl ml-4 hidden lg:block hover:underline">Livox</h1>
