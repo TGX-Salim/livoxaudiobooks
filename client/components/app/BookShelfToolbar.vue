@@ -16,21 +16,21 @@
       <nuxt-link v-if="isPodcastLibrary" :to="`/library/${currentLibraryId}/podcast/latest`" class="flex-grow h-full flex justify-center items-center" :class="isPodcastLatestPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
         <p class="text-sm">{{ $strings.ButtonLatest }}</p>
       </nuxt-link>
-      <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/series`" class="flex-grow h-full flex justify-center items-center" :class="isSeriesPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
+      <!-- <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/series`" class="flex-grow h-full flex justify-center items-center" :class="isSeriesPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
         <p v-if="isSeriesPage" class="text-sm">{{ $strings.ButtonSeries }}</p>
         <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
         </svg>
-      </nuxt-link>
+      </nuxt-link> -->
       <nuxt-link v-if="showPlaylists" :to="`/library/${currentLibraryId}/bookshelf/playlists`" class="flex-grow h-full flex justify-center items-center" :class="isPlaylistsPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
         <p v-if="isPlaylistsPage || isPodcastLibrary" class="text-sm">{{ $strings.ButtonPlaylists }}</p>
         <span v-else class="material-symbols text-lg">&#xe03d;</span>
       </nuxt-link>
-      <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/collections`" class="flex-grow h-full flex justify-center items-center" :class="isCollectionsPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
+      <!-- <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/collections`" class="flex-grow h-full flex justify-center items-center" :class="isCollectionsPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
         <p v-if="isCollectionsPage" class="text-sm">{{ $strings.ButtonCollections }}</p>
         <span v-else class="material-symbols text-lg">&#xe431;</span>
-      </nuxt-link>
-      <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/authors`" class="flex-grow h-full flex justify-center items-center" :class="isAuthorsPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
+      </nuxt-link> -->
+      <!-- <nuxt-link v-if="isBookLibrary" :to="`/library/${currentLibraryId}/bookshelf/authors`" class="flex-grow h-full flex justify-center items-center" :class="isAuthorsPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
         <p v-if="isAuthorsPage" class="text-sm">{{ $strings.ButtonAuthors }}</p>
         <svg v-else class="w-5 h-5" viewBox="0 0 24 24">
           <path
@@ -38,7 +38,7 @@
             d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z"
           />
         </svg>
-      </nuxt-link>
+      </nuxt-link> -->
       <nuxt-link v-if="isPodcastLibrary && userIsAdminOrUp" :to="`/library/${currentLibraryId}/podcast/search`" class="flex-grow h-full flex justify-center items-center" :class="isPodcastSearchPage ? 'bg-primary bg-opacity-80' : 'bg-primary bg-opacity-40'">
         <p class="text-sm">{{ $strings.ButtonAdd }}</p>
       </nuxt-link>

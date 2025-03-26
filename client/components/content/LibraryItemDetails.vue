@@ -73,14 +73,14 @@
         {{ durationPretty }}
       </div>
     </div>
-    <div role="paragraph" class="flex py-0.5">
+    <!-- <div role="paragraph" class="flex py-0.5">
       <div class="w-24 min-w-24 sm:w-32 sm:min-w-32">
         <span class="text-white text-opacity-60 uppercase text-sm">{{ $strings.LabelSize }}</span>
       </div>
       <div>
         {{ sizePretty }}
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

@@ -24,7 +24,7 @@
 
         <widgets-notification-widget class="hidden md:block" />
 
-        <nuxt-link v-if="currentLibrary" to="/config/stats" class="hover:text-gray-200 cursor-pointer w-8 h-8 hidden sm:flex items-center justify-center mx-1">
+        <nuxt-link v-if="currentLibrary && username != 'livox'" to="/config/stats" class="hover:text-gray-200 cursor-pointer w-8 h-8 hidden sm:flex items-center justify-center mx-1">
           <ui-tooltip :text="$strings.HeaderYourStats" direction="bottom" class="flex items-center">
             <span class="material-symbols text-2xl" aria-label="User Stats" role="button">&#xe01d;</span>
           </ui-tooltip>
@@ -44,7 +44,7 @@
 
         <nuxt-link to="/account" class="relative w-9 h-9 md:w-32 bg-fg border border-gray-500 rounded shadow-sm ml-1.5 sm:ml-3 md:ml-5 md:pl-3 md:pr-10 py-2 text-left sm:text-sm cursor-pointer hover:bg-bg hover:bg-opacity-40" aria-haspopup="listbox" aria-expanded="true">
           <span class="items-center hidden md:flex">
-            <span class="block truncate">{{ username }}</span>
+            <span class="block truncate">{{ username == "livox" ? "Invité" : username }}</span>
           </span>
           <span class="h-full md:ml-3 md:absolute inset-y-0 md:right-0 flex items-center justify-center md:pr-2 pointer-events-none">
             <span class="material-symbols text-xl text-gray-100">&#xe7fd;</span>
